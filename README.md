@@ -8,6 +8,8 @@ Test Runner: TestNg
 Design Pattern: Page Object Model (POM)
 Reporting: Extent and TestNG Reporters
 CI/CD Integration: GitHub Actions
+
+
 🎯 Features
 Organized using Page Object Model for maintainability
 Supports cross-browser testing (Chrome, Firefox, Edge)
@@ -16,6 +18,8 @@ Handling Falky Tests
 Reading the Data from Json File by using Jackson bind dependencies
 Parallel and selective test execution
 Clean and easy-to-read test syntax
+
+
 🧪 Sample Test Scenarios
 Login functionality validation
 Order Product End to End validation testing
