@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="2" failed="1" skipped="1">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-02T15:24:12 IST" name="Suite" finished-at="2025-08-02T15:24:23 IST" duration-ms="10728">
+    <groups>
+      <group name="ErrorHandling">
+        <method signature="ErrorValidationsTest.loginErrorValidation()[pri:0, instance:com.qa.tests.ErrorValidationsTest@4c39bec8]" name="loginErrorValidation" class="com.qa.tests.ErrorValidationsTest"/>
+      </group> <!-- ErrorHandling -->
+      <group name="Purchase">
+        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:com.qa.tests.SubmitOrderTest@327514f]" name="submitOrder" class="com.qa.tests.SubmitOrderTest"/>
+      </group> <!-- Purchase -->
+    </groups>
+    <test started-at="2025-08-02T15:24:12 IST" name="ErrorValidationTest" finished-at="2025-08-02T15:24:17 IST" duration-ms="5386">
+      <class name="com.qa.tests.ErrorValidationsTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.qa.tests.ErrorValidationsTest@4c39bec8]" started-at="2025-08-02T15:24:12 IST" name="launchApplication" finished-at="2025-08-02T15:24:16 IST" duration-ms="4222" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="loginErrorValidation()[pri:0, instance:com.qa.tests.ErrorValidationsTest@4c39bec8]" started-at="2025-08-02T15:24:16 IST" name="loginErrorValidation" finished-at="2025-08-02T15:24:17 IST" duration-ms="977" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginErrorValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.tests.ErrorValidationsTest@4c39bec8]" started-at="2025-08-02T15:24:17 IST" name="tearDown" finished-at="2025-08-02T15:24:17 IST" duration-ms="115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.tests.ErrorValidationsTest -->
+    </test> <!-- ErrorValidationTest -->
+    <test started-at="2025-08-02T15:24:12 IST" name="SubmitOrderTest" finished-at="2025-08-02T15:24:23 IST" duration-ms="10728">
+      <class name="com.qa.tests.SubmitOrderTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.qa.tests.SubmitOrderTest@327514f]" started-at="2025-08-02T15:24:12 IST" name="launchApplication" finished-at="2025-08-02T15:24:15 IST" duration-ms="2808" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:com.qa.tests.SubmitOrderTest@327514f]" started-at="2025-08-02T15:24:15 IST" name="submitOrder" data-provider="getData" finished-at="2025-08-02T15:24:18 IST" duration-ms="3212" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Varnam@98765, product=ZARA COAT 3, email=varam@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.tests.SubmitOrderTest@327514f]" started-at="2025-08-02T15:24:18 IST" name="tearDown" finished-at="2025-08-02T15:24:19 IST" duration-ms="180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.qa.tests.SubmitOrderTest@327514f]" started-at="2025-08-02T15:24:19 IST" name="launchApplication" finished-at="2025-08-02T15:24:20 IST" duration-ms="1682" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:com.qa.tests.SubmitOrderTest@327514f]" started-at="2025-08-02T15:24:20 IST" name="submitOrder" data-provider="getData" finished-at="2025-08-02T15:24:22 IST" duration-ms="2263" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Varnam@98765, product=ADIDAS ORIGINAL, email=naram@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at com.qa.tests.SubmitOrderTest.submitOrder(SubmitOrderTest.java:44)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.tests.SubmitOrderTest@327514f]" started-at="2025-08-02T15:24:22 IST" name="tearDown" finished-at="2025-08-02T15:24:23 IST" duration-ms="119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="orderHistoryTest(java.util.HashMap)[pri:0, instance:com.qa.tests.SubmitOrderTest@327514f]" started-at="2025-08-02T15:24:23 IST" name="orderHistoryTest" finished-at="2025-08-02T15:24:23 IST" depends-on-methods="com.qa.tests.SubmitOrderTest.submitOrder" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method com.qa.tests.SubmitOrderTest.orderHistoryTest() on instance com.qa.tests.SubmitOrderTest@327514f depends on not successfully finished methods 
+[com.qa.tests.SubmitOrderTest.submitOrder() on instance com.qa.tests.SubmitOrderTest@327514f]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method com.qa.tests.SubmitOrderTest.orderHistoryTest() on instance com.qa.tests.SubmitOrderTest@327514f depends on not successfully finished methods 
+[com.qa.tests.SubmitOrderTest.submitOrder() on instance com.qa.tests.SubmitOrderTest@327514f]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderHistoryTest -->
+      </class> <!-- com.qa.tests.SubmitOrderTest -->
+    </test> <!-- SubmitOrderTest -->
+  </suite> <!-- Suite -->
+</testng-results>
